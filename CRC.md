@@ -1,27 +1,32 @@
-# Takeaway Challenge
+Takeaway Challenge
+==================
 
-## CRC
+CRC
+---
 
-### Menu Module
+Menu Module
+-----------
 
-Responsabilities |   Collaborators
+Responsibilities |   Collaborators
 ---------------------------------------
 List of dishes   | Customer, Restaurant
 List of prices   | Customer, Restaurant
 
 
-### Customer Class
+Customer Class
+--------------
 
-    Responsabilities       |  Collaborators
+    Responsibilities       |  Collaborators
 --------------------------------------------
 Check Menu                 | 
 Place order                | Restaurant
 Receive order confirmation | Restaurant
 
 
-### Restaurant (takeaway) Class
+Restaurant (takeaway) Class
+---------------------------
 
-    Responsabilities    |  Collaborators
+    Responsibilities    |  Collaborators
 -----------------------------------------
 Receive order           | Customer
 Send order confirmation | Customer
