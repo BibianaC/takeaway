@@ -6,9 +6,9 @@ module Menu
   end
 
 	def menu
-    @menu = { Tortilla: 4, 
-            Ham_croquetas: 6,
-            Pimentos_de_padron: 5.5 }
+    @menu = [{ dish: Tortilla, price: 4 }, 
+             { dish: Ham_croquetas, price: 6 },
+             { dish: Pimentos_de_padron, price: 5.5 }]
   end
 
   def has_dishes?
