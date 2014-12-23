@@ -4,7 +4,7 @@ class DishesList; include Menu; end
 
 describe Menu do
 
-  let(:menu) {DishesList.new(:Tortilla, 4)}
+  let(:menu) {DishesList.new}
 	
   it 'should have dishes' do
     expect(menu).to have_dishes
