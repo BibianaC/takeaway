@@ -11,8 +11,12 @@ class Customer
     @order = []
   end
 
-  def add_dish!(dish)
+  def add!(dish)
     order << dish
+  end
+
+  def delete!(dish)
+    order.delete(dish)
   end
 
 end

@@ -15,8 +15,15 @@ describe Customer do
 
   it 'should be able to add dishes to his/her order' do
     dish = "Tortilla"
-    customer.add_dish!(dish)
+    customer.add!(dish)
     expect(customer.order).not_to be_empty
+  end
+
+  it 'should be able to delete dishes from his/ her order' do
+    dish = "Tortilla"
+    customer.add!(dish)
+    customer.delete!(dish)
+    expect(customer.order).to be_empty
   end
 
 end
