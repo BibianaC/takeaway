@@ -18,6 +18,11 @@ describe Restaurant do
     expect(restaurant.customers).to be_empty
   end
 
+  it 'should be able to have customers' do
+    restaurant.receive!(customer)
+    expect(restaurant.customers).not_to be_empty
+  end
+
   xit 'should be able to receive an order from the customer' do
     dishes = { Tortilla: 2 }
     total_price = 8

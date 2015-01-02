@@ -13,6 +13,8 @@ class Restaurant
     @customers = []
   end
 
-
+  def receive!(customer)
+    @customers << customer
+  end
 
 end
