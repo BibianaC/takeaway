@@ -4,7 +4,7 @@ class Customer
 
   include Menu
 
-  attr_reader :order, :menu
+  attr_reader :order, :menu, :total_price
 
   def initialize(menu)
     @menu = menu
