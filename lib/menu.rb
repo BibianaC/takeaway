@@ -14,4 +14,8 @@ module Menu
     @prices = true
   end
 
+  def empty?
+    @empty
+  end
+
 end
