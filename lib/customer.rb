@@ -8,15 +8,24 @@ class Customer
 
   def initialize(menu)
     @menu = menu
-    @order = []
+    @order = {}
+    @total_price = 0
   end
 
-  def add!(dish)
-    order << dish
+  def add!(dishes, total_price)
+    @order = @order.merge(dishes)
+    @total_price += total_price 
   end
 
-  def delete!(dish)
-    order.delete(dish)
+  def delete!(dishes, total_price)
+    dishes.each do |dish, quantity|
+      if quantity == @order[dish]
+        @order.delete(dish)
+      else
+        @order[dish] -= quantity
+      end
+    end
+    @total_price -= total_price
   end
 
 end
