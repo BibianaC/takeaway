@@ -14,7 +14,13 @@ class Customer
 
   def add!(dishes, total_price)
     @order = @order.merge(dishes)
-    @total_price += total_price 
+    @total_price += total_price
+
+    total_value = 0
+    dishes.each do |dish, quantity|
+      total_value += quantity * dishes_list[dish]
+    end
+    raise 'Total price is not correct' if total_value != total_price
   end
 
   def delete!(dishes, total_price)
