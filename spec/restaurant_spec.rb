@@ -11,7 +11,7 @@ describe Restaurant do
   end
 
   it 'should not have orders when initialized' do
-    expect(restaurant.order).to be_empty
+    expect(restaurant).not_to have_orders
   end
 
   it 'should not have customers when initialized' do
