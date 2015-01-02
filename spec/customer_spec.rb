@@ -2,11 +2,15 @@ require 'customer'
 
 describe Customer do
 	
-  let(:customer) {Customer.new}
+  let(:menu) {DishesList.new}
+  let(:customer) { Customer.new(menu) }
 
-  it 'should have an empty order when initialize' do
-    expect(customer.order).to be_empty
+  it 'should be able to view the menu' do
+    expect(customer.menu.dishes_list).to eq(menu.dishes_list)
   end
 
+  it 'should have an empty order when initialized' do
+    expect(customer.order).to be_empty
+  end
 
 end

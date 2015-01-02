@@ -1,8 +1,13 @@
+require_relative 'menu'
+
 class Customer
 
-  attr_reader :order
+  include Menu
 
-  def initialize
+  attr_reader :order, :menu
+
+  def initialize(menu)
+    @menu = menu
     @order = {}
   end
 
