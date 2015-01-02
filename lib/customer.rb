@@ -8,7 +8,11 @@ class Customer
 
   def initialize(menu)
     @menu = menu
-    @order = {}
+    @order = []
+  end
+
+  def add_dish!(dish)
+    order << dish
   end
 
 end
