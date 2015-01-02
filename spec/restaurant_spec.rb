@@ -10,7 +10,7 @@ describe Restaurant do
     expect(restaurant.menu.dishes_list).to eq(menu.dishes_list)
   end
 
-  it 'should have an empty order when initialized' do
+  it 'should not have orders when initialized' do
     expect(restaurant.order).to be_empty
   end
 
@@ -23,11 +23,12 @@ describe Restaurant do
     expect(restaurant.customers).not_to be_empty
   end
 
-  xit 'should be able to receive an order from the customer' do
+  it 'should be able to receive an order from the customer' do
     dishes = { Tortilla: 2 }
     total_price = 8
+    restaurant.receive!(customer)
     customer.add!(dishes, total_price)
-    expect(restaurant.order).not_to be_empty
+    expect(restaurant).to have_orders
   end
 
 end

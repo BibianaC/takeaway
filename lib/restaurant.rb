@@ -17,4 +17,12 @@ class Restaurant
     @customers << customer
   end
 
+  def has_orders?
+    return false if @customers.empty?
+    @customers.each do |customer|
+      return true if !customer.order.empty?
+    end
+    return false  
+  end
+
 end
