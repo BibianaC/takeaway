@@ -5,9 +5,10 @@ class Restaurant
 
   include Menu
 
-  attr_reader :order, :customers
+  attr_reader :menu, :order, :customers
 
-  def initialize
+  def initialize(menu)
+    @menu = menu
     @order = {}
     @customers = []
   end

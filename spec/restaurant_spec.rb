@@ -3,8 +3,12 @@ require 'restaurant'
 describe Restaurant do
 	
   let(:menu) {DishesList.new}
-  let(:restaurant) { Restaurant.new }
+  let(:restaurant) { Restaurant.new(menu) }
   let(:customer) { Customer.new(menu) }
+
+  it 'should have a menu' do
+    expect(restaurant.menu.dishes_list).to eq(menu.dishes_list)
+  end
 
   it 'should have an empty order when initialized' do
     expect(restaurant.order).to be_empty
