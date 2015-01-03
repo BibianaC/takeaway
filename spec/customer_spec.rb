@@ -13,6 +13,10 @@ describe Customer do
     expect(customer.order).to be_empty
   end
 
+  it 'should have a total price of 0 when initialized' do
+    expect(customer.total_price).to eq(0)
+  end
+
   it 'should be able to add dishes and total price to the order' do
     dishes = { Tortilla: 2 }
     total_price = 8
