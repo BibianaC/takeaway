@@ -39,6 +39,11 @@ describe Customer do
     expect(customer.total_price).to eq(4)
   end
 
+  it 'should not be able to delete more dishes than the ones ordered' do
+    customer.add!({ Tortilla: 2 }, 8)
+    expect(lambda { customer.delete!({ Tortilla: 3 }, 12) }).to raise_error(RuntimeError, 'Quantity not correct')
+  end
+
   it 'should raise an error when the total price is incorrect' do
     expect(lambda { customer.add!({ Tortilla: 2 }, 9) }).to raise_error(RuntimeError, 'Total price is not correct')
   end

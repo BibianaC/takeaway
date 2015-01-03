@@ -27,6 +27,8 @@ class Customer
     dishes.each do |dish, quantity|
       if quantity == @order[dish]
         @order.delete(dish)
+      elsif quantity > @order[dish]
+        raise 'Quantity not correct'
       else
         @order[dish] -= quantity
       end
