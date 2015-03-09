@@ -1,5 +1,8 @@
 require 'menu'
 
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
+
 class DishesList; include Menu; end
 
 describe Menu do

@@ -1,4 +1,5 @@
 require 'yaml'
+require 'twilio-ruby'
 
 class Messenger
 
@@ -12,4 +13,17 @@ class Messenger
     @receiver_num = twilio['to']
   end
 
+  # def client
+  #   @client.account
+  # end
+
 end
+
+# set up a client to talk to the Twilio REST API 
+# @client = Twilio::REST::Client.new account_sid, auth_token 
+ 
+# @client.account.messages.create({
+#   :from => '+441494372322', 
+#   :to => '+447450267998', 
+#   :body => 'test',  
+# })

@@ -1,3 +1,6 @@
+[![Code Climate](https://codeclimate.com/github/BibianaC/takeaway/badges/gpa.svg)](https://codeclimate.com/github/BibianaC/takeaway)
+[![Test Coverage](https://codeclimate.com/github/BibianaC/takeaway/badges/coverage.svg)](https://codeclimate.com/github/BibianaC/takeaway)
+
 # Takeaway Challenge
 
 ## Task

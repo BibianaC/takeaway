@@ -1,5 +1,8 @@
 require 'restaurant'
 
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
+
 describe Restaurant do
 	
   let(:menu) { DishesList.new }

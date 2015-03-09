@@ -1,5 +1,8 @@
 require 'customer'
 
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
+
 describe Customer do
 	
   let(:menu) { DishesList.new }
